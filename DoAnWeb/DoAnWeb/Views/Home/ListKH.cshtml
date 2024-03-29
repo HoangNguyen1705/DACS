@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DoAnWeb.Models.KhachHang>
+@{
+    ViewBag.Title = "ListFood";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LIST CUSTOMER</h2>
+<table class="table">
+
+    <tr>
+        <th>Mã Khách Hàng</th>
+        <th>Họ Tên Khách Hàng</th>
+        <th>Email</th>
+        <th>Địa chỉ</th>
+        <th>Số điện thoại</th>
+        
+    </tr>
+
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.makh)</td>
+                    <td>@Html.DisplayFor(modelItem => item.hoten)</td>
+                    <td>@Html.DisplayFor(modelItem => item.email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.diachi)</td>
+                    <td>@Html.DisplayFor(modelItem => item.dienthoai)</td>
+                </tr>
+            }
+</table>
